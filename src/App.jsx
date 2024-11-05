@@ -1,13 +1,18 @@
 
+import { InputDefault } from './components/shared/UI/Inputs/inputs.jsx'
 import './App.css'
 import goh from "./assets/ghhbnjjj.jpg"
-import Button from './components/Ui/Buttons/Button'
+import Button from './components/shared/UI/Buttons/Button.jsx'
+
 
 function App() {
 
 
   return (
     <>
+    <InputDefault ph="Монолог 1" />
+    <InputDefault ph="Монолог 2" />
+    <InputDefault ph="Монолог 3" />
       <img src={goh} alt="" />
       <Button text="buy"/>
        <Button text="sell"/>
