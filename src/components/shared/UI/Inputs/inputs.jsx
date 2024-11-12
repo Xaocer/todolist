@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./inputs.module.css"
 
 
@@ -14,4 +15,19 @@ const InputDefault = ({ ph  }) => {
      type="text"
     placeholder={ph} />;
 };
-export { InputDefault };
+const InputPassword = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleClick =()=>{console.log("Не надо дядя");
+        setIsVisible(!isVisible);
+    };
+     
+    return (
+    <div>
+     <input type={isVisible == true ? "text": "password"}/>
+     <button onClick={handleClick}>Показать пароль</button>
+    </div>
+    );
+};
+
+export { InputDefault, InputPassword };
