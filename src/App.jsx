@@ -4,6 +4,8 @@ import './App.css'
 import goh from "./assets/ghhbnjjj.jpg"
 import Button from './components/shared/UI/Buttons/Button.jsx'
 import { TextArea } from './components/shared/UI/TextArea/textArea.jsx'
+import ProjectsSidebar from './components/shared/ProjectsSidebar/ProjectsSidebar.jsx'
+
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <TextArea placeholder="Текст 2" bgColor="blue" textsize="120px" />
       <TextArea placeholder="Текст 3"  bgColor="black"textsize="1px"/>
       <img src={goh} alt="" />
+      
+      <ProjectsSidebar/>
       <Button text="buy"/>
        <Button text="sell"/>
         <Button text="kill"/>
@@ -32,7 +36,7 @@ function App() {
 
 
     </>
-  )
-}
+  );
+};
 
 export default App
