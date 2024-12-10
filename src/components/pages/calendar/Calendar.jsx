@@ -1,14 +1,14 @@
 import NavBar from "@/components/shared/NavBar/NavBar";
 
-function Profile() {
-    return (
+function CalendarPage() {
+    return(
         <>
         <NavBar />
         <main>
-        <h1>Наш профиль</h1>
+        <h1>Календарь</h1>
         </main>
         </>
     );
 }
 
-export default Profile;
+export default CalendarPage;

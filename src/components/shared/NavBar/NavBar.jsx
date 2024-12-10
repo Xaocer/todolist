@@ -3,7 +3,8 @@ import profile from "@assets/icons/navbar/profile.svg"
 import calendar from "@assets/icons/navbar/calendar.svg"
 import main from "@assets/icons/navbar/main.svg"
 import logout from "@assets/icons/navbar/logout.svg"
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { Fragment } from "react";
 
 const linksList = [
     {
@@ -26,15 +27,18 @@ const NavBar = () => {
                 {linksList.map(function(item,i){
                     console.log("Номер",i,item);
                     return(
-                        <>
+                        <Fragment key={i}>
                         <NavLink to={item.link}>
                             <img src={item.icon} alt="" />
                         </NavLink>
-                        </>
+                        </Fragment>
                         );
                     })
                 }
             </nav>
+            <Link to={"/login"}>
+            <img src={logout} alt="" />
+            </Link>
          </aside>
     );
 };
